@@ -1,0 +1,85 @@
+@import 'vars';
+
+html, body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1em;
+}
+
+.navigation,
+.title,
+h1,h2,h3,h4,h5 {
+  font-family: 'Dosis', sans-serif !important;
+  margin: 0;
+}
+
+/* common resets */
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: @base-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.structural {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container {
+  margin: 0 auto;
+}
+@media (min-width: @v-large) {
+  .container {
+    max-width:1270px;
+  }
+}
+@media (min-width: @v-large) {
+  .container {
+    max-width:1270px;
+  }
+}
+
+.shaded {
+  background-color: @bgLight;
+}
+
+.title {
+  display: inline-block;
+  font-weight:normal;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.title::before {
+  display: inline-block;
+  content: '';
+  background: url(/images/macbook.svg) center center;
+  width: 45px;
+  height: 26px;
+  margin-right: 5px;
+}
+
+.section {
+  padding: 1em 0;
+}
+.section-header {
+  text-align:center;
+}
+
+.spinner {
+  text-align: center;
+}
