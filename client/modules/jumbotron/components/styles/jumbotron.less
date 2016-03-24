@@ -1,56 +1,56 @@
 @import "/client/modules/core/components/styles/vars";
 
 .jumbotron {
-  //height: 610px;
-  height: calc(90vh);  //114 = header height (50px) + about me heading (64px)
+  height: calc(90vh);
   max-height: 1024px;
   text-align: center;
-  //background: url(/images/display.svg) center top no-repeat;
-  //background-size: 1048px 866px;
   overflow: hidden;
   background-color: #000;
 }
 
 .jumbotron-item {
-  //padding-top: 40px;
   height: 100%;
   background-size: cover !important;
   max-width: 2200px;
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 .jumbotron-image {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  //max-width: 300px;
   max-width: 1400px;
   background-size: auto 50% !important;
 }
-/*
-@media (min-width: @v-small) {
-  .jumbotron-image {
-    margin: 0 auto;
-    max-width: 480px;
-  }
+
+.jumbotron-message-wrapper {
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  top: -200px;
+  font-size: 2rem;
+  letter-spacing: 8px;
+  transition: top 1s ease-out;
+  background: rgba(0,0,0, 0.4);
+  padding: 1em;
 }
-@media (min-width: @v-medium) {
-  .jumbotron-image {
-    margin: 0 auto;
-    max-width: 720px;
-  }
+
+.jumbotron-message-wrapper--visible {
+  top: 10%;
 }
-@media (min-width: @v-screen) {
-  .jumbotron-image {
-    margin: 0 auto;
-    max-width: 960px;
-  }
+
+.jumbotron-message,
+.jumbotron-tagline {
+  text-shadow: 0px 0px 0px #000;
 }
-@media (min-width: @v-x-large) {
-  .jumbotron-image {
-    margin: 0 auto;
-    max-width: 1400px;
-  }
-}*/
+
+.jumbotron-message {
+  margin-bottom: 0.4em;
+}
+
+.jumbotron-tagline {
+  font-size: 0.5em;
+}

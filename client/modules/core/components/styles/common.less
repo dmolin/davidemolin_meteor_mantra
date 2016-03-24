@@ -1,5 +1,9 @@
 @import 'vars';
 
+html, body, * {
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: 'Roboto', sans-serif !important;
   font-size: 1em;
@@ -7,8 +11,10 @@ html, body {
 
 .navigation,
 .title,
+.section-title,
 h1,h2,h3,h4,h5 {
   font-family: 'Dosis', sans-serif !important;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -58,13 +64,12 @@ a, a:visited {
   background-color: @bgLight;
 }
 
-.title {
+.section-title {
   display: inline-block;
   font-weight:normal;
   font-size: 24px;
-  text-transform: uppercase;
 }
-.title::before {
+.section-title::before {
   display: inline-block;
   content: '';
   background: url(/images/macbook.svg) center center;
