@@ -8,11 +8,16 @@ class Jumbotron extends React.Component {
 
     return (
       <section className={className + " jumbotron"} >
-        {projects.map(project =>(
-          <article className="jumbotron-item" key={project._id}>
-            <img src={"/images/projects/" + project.image} />
-          </article>
-        ))}
+        {projects.map(project => {
+          const styleValue = "url(/images/projects/" + project.imageBg + ") center top no-repeat";
+          const fgImageBg = "url(/images/projects/" + project.imageFg + ") bottom center no-repeat";
+
+          return (
+            <article className="jumbotron-item" key={project._id} style={{background: styleValue}}>
+              <div className="jumbotron-image" style={{background: fgImageBg }} />
+            </article>
+          );
+        })}
       </section>
     );
   }

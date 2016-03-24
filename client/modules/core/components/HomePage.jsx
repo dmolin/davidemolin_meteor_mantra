@@ -6,9 +6,11 @@ import FunFacts from './FunFacts.jsx';
 
 const HomePage = ({content = () => null}) => (
   <section className="home">
-    <Jumbotron className="container" />
+    <Jumbotron message="Hi, I'm Davide Molin" tagline="I do front-end development for a living"/>
+    <span className="structural" data-id="about-me" />
     <AboutMe />
-    <Testimonials />
+    <span className="structural"  data-id="testimonials" />
+    <Testimonials/>
     <FunFacts />
   </section>
 );
