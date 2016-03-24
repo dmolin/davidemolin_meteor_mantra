@@ -9,6 +9,7 @@ Meteor.startup(() => {
     console.log("Bootstrapping the DB...");
 
     Collections.Projects.insert({image:'payfriendz.jpg', thumb:'', description:'', featured:true});
+    Collections.Projects.insert({image:'udemy.jpg', thumb:'', description:'', featured:true});
   }
 
   publications();

@@ -9,7 +9,7 @@ class Jumbotron extends React.Component {
     return (
       <section className={className + " jumbotron"} >
         {projects.map(project =>(
-          <article key={project._id}>
+          <article className="jumbotron-item" key={project._id}>
             <img src={"/images/projects/" + project.image} />
           </article>
         ))}
