@@ -6,7 +6,9 @@ html, body, * {
 
 html, body {
   font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
   font-size: 1em;
+  line-height:1.2em;
 }
 
 .navigation,
@@ -14,8 +16,33 @@ html, body {
 .section-title,
 h1,h2,h3,h4,h5 {
   font-family: 'Dosis', sans-serif !important;
+  font-weight:normal;
   text-transform: uppercase;
   margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: .6em 0;
+}
+
+@media (min-width: @v-large) {
+  html, body {
+    font-size: 1.2em;
+    line-height:1.4em;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
 }
 
 /* common resets */
@@ -48,11 +75,7 @@ a, a:visited {
 
 .container {
   margin: 0 auto;
-}
-@media (min-width: @v-large) {
-  .container {
-    max-width:1270px;
-  }
+  padding: 0 1em;
 }
 @media (min-width: @v-large) {
   .container {
@@ -66,8 +89,8 @@ a, a:visited {
 
 .section-title {
   display: inline-block;
-  font-weight:normal;
-  font-size: 24px;
+  //font-size: 24px;
+  margin-bottom: 1em;
 }
 .section-title::before {
   display: inline-block;
@@ -79,7 +102,7 @@ a, a:visited {
 }
 
 .section {
-  padding: 1em 0;
+  padding: 1.5em 0;
 }
 .section-header {
   text-align:center;
@@ -87,4 +110,52 @@ a, a:visited {
 
 .spinner {
   text-align: center;
+}
+
+.cameo {
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-size: contain !important;
+  margin: 0 0.5em;
+}
+
+.social-link--github {
+  background: url(/images/fa-github.svg) center center no-repeat;
+}
+
+.social-link--linkedin {
+  background: url(/images/fa-linkedin.svg) center center no-repeat;
+}
+
+.social-link--twitter {
+  background: url(/images/fa-twitter.svg) center center no-repeat;
+}
+
+.social-link--facebook {
+  background: url(/images/fa-facebook.svg) center center no-repeat;
+}
+
+.social-link--gplus {
+  background: url(/images/fa-google-plus.svg) center center no-repeat;
 }
