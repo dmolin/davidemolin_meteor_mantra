@@ -23,3 +23,4 @@ audit-argument-checks
 check
 random
 less
+zimme:collection-timestampable

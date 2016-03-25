@@ -3,7 +3,6 @@ import React from 'react';
 
 class Jumbotron extends React.Component {
   render() {
-    console.log(this.data);
     let {className = "", projects, message, tagline, ...props} = this.props;
 
     setTimeout(this.displayMessage.bind(this), 1000);

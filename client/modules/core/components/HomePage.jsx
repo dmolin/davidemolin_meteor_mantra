@@ -1,7 +1,7 @@
 import React from 'react';
 import Jumbotron from '../../jumbotron/containers/Jumbotron';
 import AboutMe from './AboutMe.jsx';
-import Testimonials from './Testimonials.jsx';
+import Testimonials from '../containers/Testimonials';
 import FunFacts from './FunFacts.jsx';
 
 const HomePage = ({content = () => null}) => (
