@@ -4,6 +4,9 @@ import AboutMe from './AboutMe.jsx';
 import Testimonials from '../containers/Testimonials';
 import FunFacts from './FunFacts.jsx';
 import LatestWorks from './LatestWorks.jsx';
+import MyValues from './MyValues.jsx';
+import GetInTouch from './GetInTouch.jsx';
+import Footer from './Footer.jsx';
 
 const HomePage = ({content = () => null}) => (
   <section className="home">
@@ -14,6 +17,9 @@ const HomePage = ({content = () => null}) => (
     <Testimonials/>
     <FunFacts />
     <LatestWorks />
+    <MyValues />
+    <GetInTouch />
+    <Footer />
   </section>
 );
 

@@ -8,7 +8,7 @@ class Jumbotron extends React.Component {
     setTimeout(this.displayMessage.bind(this), 1000);
 
     return (
-      <section className={className + " jumbotron"} >
+      <section className={className + " jumbotron vh_height90"} >
         {projects.map(project => {
           const styleValue = "url(/images/projects/" + project.imageBg + ") center top no-repeat";
           const fgImageBg = "url(/images/projects/" + project.imageFg + ") bottom center no-repeat";
