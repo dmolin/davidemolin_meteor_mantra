@@ -3,6 +3,7 @@ import Jumbotron from '../../jumbotron/containers/Jumbotron';
 import AboutMe from './AboutMe.jsx';
 import Testimonials from '../containers/Testimonials';
 import FunFacts from './FunFacts.jsx';
+import LatestWorks from './LatestWorks.jsx';
 
 const HomePage = ({content = () => null}) => (
   <section className="home">
@@ -12,6 +13,7 @@ const HomePage = ({content = () => null}) => (
     <span className="structural"  data-id="testimonials" />
     <Testimonials/>
     <FunFacts />
+    <LatestWorks />
   </section>
 );
 
