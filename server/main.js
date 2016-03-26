@@ -9,12 +9,21 @@ Meteor.startup(() => {
   console.log("Bootstrapping the DB...");
 
   //for testing only
-  Collections.FeaturedProjects.remove({});
-  Collections.Projects.remove({});
-  Collections.Testimonials.remove({});
+  insertFeaturedProjects()
+  insertProjects()
+  insertTestimonials()
+  //}
 
-  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', priority:1000});
+  publications();
+});
 
+function insertFeaturedProjects() {
+  Collections.FeaturedProjects.remove({})
+  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', priority:1000})
+}
+
+function insertProjects() {
+  Collections.Projects.remove({})
   Collections.Projects.insert({
     title:'Kanban React',
     description:[
@@ -26,14 +35,13 @@ Meteor.startup(() => {
     liveUrl: 'http://dmolin.github.io/react-kanban/',
     image: 'projects/kanban-react.png',
     priority: 1000
-  });
-  
+  })
+}
+
+function insertTestimonials() {
+  Collections.Testimonials.remove({})
   Collections.Testimonials.insert({
     avatar:'profile-avelasquez.jpg', name:'Alejandro Velasquez', title:'UX/UI at Payfriendz',
     recommendation:'Honoured to work next to such a brilliant professional. Thanks Davide!',
-    at:moment('2016-02-24', 'YYYY-MM-DD').toDate(), relationship:'Alejandro worked directly with Davide at Payfriendz'});
-  
-  //}
-
-  publications();
-});
+    at:moment('2016-02-24', 'YYYY-MM-DD').toDate(), relationship:'Alejandro worked directly with Davide at Payfriendz'})
+}

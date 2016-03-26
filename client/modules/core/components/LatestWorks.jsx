@@ -3,6 +3,8 @@ import Project from './Project.jsx'
 
 class LatestWorks extends React.Component {
   render() {
+    const {projects} = this.props;
+    
     return (
       <section className="latest-works section container">
         <div className="">
@@ -11,11 +13,15 @@ class LatestWorks extends React.Component {
 
             <p>Here is a brief selection of some of the projects I’ve been working on recently...</p>
           </header>
-          <div className="section-content pure-grid">
-            <ul className="projects">
-              <Project />
-            </ul>
-          </div>
+          {projects.map((p) => {
+            return (
+              <div className="section-content pure-grid" key={p._id}>
+                <ul className="projects">
+                  <Project {...p} />
+                </ul>
+              </div>
+            )
+          })}
         </div>
       </section>
     )
