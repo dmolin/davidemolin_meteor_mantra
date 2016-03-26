@@ -9,12 +9,25 @@ Meteor.startup(() => {
   console.log("Bootstrapping the DB...");
 
   //for testing only
+  Collections.FeaturedProjects.remove({});
   Collections.Projects.remove({});
   Collections.Testimonials.remove({});
 
-  //Collections.Projects.insert({image:'payfriendz.jpg', thumb:'', description:'', featured:true});
-  //Collections.Projects.insert({image:'udemy.jpg', thumb:'', description:'', featured:true});
-  Collections.Projects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', thumb:'', description:'', featured:true});
+  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', priority:1000});
+
+  Collections.Projects.insert({
+    title:'Kanban React',
+    description:[
+      "A small project I built while studying React.",
+      "The project is build using React and Flux and intentionally mimicks the look and feel of Trello. You can add/remove columns and cards, reorder them and drag and drop columns and cards around the board"
+    ],
+    technologies:'',  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/react-kanban',
+    liveUrl: 'http://dmolin.github.io/react-kanban/',
+    image: 'projects/kanban-react.png',
+    priority: 1000
+  });
+  
   Collections.Testimonials.insert({
     avatar:'profile-avelasquez.jpg', name:'Alejandro Velasquez', title:'UX/UI at Payfriendz',
     recommendation:'Honoured to work next to such a brilliant professional. Thanks Davide!',

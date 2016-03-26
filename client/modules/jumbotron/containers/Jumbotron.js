@@ -7,7 +7,7 @@ import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
   if(Meteor.subscribe('projects.featured').ready()) {
-    const projects = Collections.Projects.find({featured:true}).fetch();
+    const projects = Collections.FeaturedProjects.find({}, {sort:{priority:-1, createdAt:-1}}).fetch();
     onData(null, {projects});
   }
 };
