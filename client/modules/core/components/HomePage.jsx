@@ -9,7 +9,7 @@ import GetInTouch from './GetInTouch.jsx';
 import Footer from './Footer.jsx';
 
 const HomePage = ({content = () => null}) => (
-  <section className="home">
+  <section className="home" data-id="home">
     <Jumbotron message="Hi, I'm Davide Molin" tagline="I do front-end development for a living"/>
     <AboutMe data-id="about-me"/>
     <Testimonials data-id="testimonials" />

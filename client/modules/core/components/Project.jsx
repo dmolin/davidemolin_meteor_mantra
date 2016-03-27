@@ -2,11 +2,15 @@ import React from 'react'
 
 class Project extends React.Component {
   render() {
-    const {image, title, description, githubUrl} = this.props
+    const {image, title, description, githubUrl, liveUrl} = this.props
 
     let githubLinkOrNothing
+    let liveLinkOrNothing
     if(githubUrl) {
-      githubLinkOrNothing = <button className="pure-button button-success">View on GitHub <i className="fa fa-github"></i></button>
+      githubLinkOrNothing = <a className="pure-button button-success" target="_blank" href={githubUrl}>View on GitHub <i className="fa fa-github"></i></a>
+    }
+    if(liveUrl) {
+      liveLinkOrNothing = <a className="pure-button pure-button-primary" target="_blank" href={liveUrl}>Live Demo!</a>
     }
     return (
       <div className="project pure-u-1 __pure-u-sm-1-2 __pure-u-md-1-3 __pure-u-lg-1-4">
@@ -17,7 +21,10 @@ class Project extends React.Component {
           {description.map((d,idx) => (
             <p key={idx}>{d}</p>
           ))}
-          {githubLinkOrNothing}
+          <div className="project-ctas">
+            {githubLinkOrNothing}
+            {liveLinkOrNothing}
+          </div>  
         </div>
       </div>
     )    
