@@ -3,10 +3,10 @@ import Project from './Project.jsx'
 
 class LatestWorks extends React.Component {
   render() {
-    const {projects} = this.props;
+    const {projects, ...props} = this.props;
     
     return (
-      <section className="latest-works section container">
+      <section className="latest-works section container" {...props}>
         <div className="">
           <header className="section-header">
             <h1 className="section-title">latest works</h1>

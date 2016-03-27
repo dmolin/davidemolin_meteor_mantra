@@ -36,6 +36,18 @@ function insertProjects() {
     image: 'projects/kanban-react.png',
     priority: 1000
   })
+
+  Collections.Projects.insert({
+    title:'GunBlaster (MeteorJS)',
+    description:[
+      "MeteorJS App built for a friend, for sending email campaigns to a list of recipients through the MailGun API.",
+      "The App features user authentication, realtime interface, asynchronous job scheduling, email throttling and tracking of bounced/rejected emails"
+    ],
+    technologies:['MeteorJS', 'Mongo', 'MailGun API'],  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/meteor-gunblaster',
+    image: 'projects/gunblaster.png',
+    priority: 990
+  })
 }
 
 function insertTestimonials() {

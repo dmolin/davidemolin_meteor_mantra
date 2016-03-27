@@ -11,14 +11,12 @@ import Footer from './Footer.jsx';
 const HomePage = ({content = () => null}) => (
   <section className="home">
     <Jumbotron message="Hi, I'm Davide Molin" tagline="I do front-end development for a living"/>
-    <span className="structural" data-id="about-me" />
-    <AboutMe />
-    <span className="structural"  data-id="testimonials" />
-    <Testimonials/>
+    <AboutMe data-id="about-me"/>
+    <Testimonials data-id="testimonials" />
     <FunFacts />
-    <LatestWorks />
-    <MyValues />
-    <GetInTouch />
+    <LatestWorks data-id="works" />
+    <MyValues data-id="values" />
+    <GetInTouch data-id="contact" />
     <Footer />
   </section>
 );

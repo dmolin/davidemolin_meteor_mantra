@@ -1,8 +1,8 @@
 import React from 'react';
 import SocialIcons from './SocialIcons.jsx';
 
-export default ({content}) => (
-  <section className="get-in-touch section">
+export default (props) => (
+  <section className="get-in-touch section" {...props}>
     <div className="container">
       <header className="section-header">
         <h1 className="section-title">Get in touch</h1>

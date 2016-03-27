@@ -3,10 +3,10 @@ import Time from 'react-time';
 
 class Testimonials extends React.Component {
   render () {
-    const {testimonials} = this.props;
+    const {testimonials, ...props} = this.props;
 
     return (
-      <section className="testimonials section">
+      <section className="testimonials section" {...props}>
         <div className="container">
           <header className="section-header">
             <h1 className="section-title">Testimonials</h1>

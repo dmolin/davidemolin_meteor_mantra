@@ -10,13 +10,13 @@ class Navbar extends React.Component {
           </a>
         </div>
         <nav className="navbar-items navigation pure-u-1 pure-u-md-3-4">
-          <ul className="pure-menu-horizontal">
+          <ul className="pure-menu-horizontal" onClick={this.goTo.bind(this)}>
             <li className="navigation-item pure-menu-item"><a href="#">Home</a></li>
-            <li className="navigation-item pure-menu-item"><a onClick={this.goTo.bind(this)} data-target="about-me" href="#" >About me</a></li>
-            <li className="navigation-item pure-menu-item"><a onClick={this.goTo.bind(this)} data-target="testimonials" href="#" >Testimonials</a></li>
-            <li className="navigation-item pure-menu-item"><a href="#" >Works</a></li>
-            <li className="navigation-item pure-menu-item"><a href="#" >Values</a></li>
-            <li className="navigation-item pure-menu-item"><a href="#" >Contact</a></li>
+            <li className="navigation-item pure-menu-item"><a data-target="about-me" href="#" >About me</a></li>
+            <li className="navigation-item pure-menu-item"><a data-target="testimonials" href="#" >Testimonials</a></li>
+            <li className="navigation-item pure-menu-item"><a data-target="works" href="#" >Works</a></li>
+            <li className="navigation-item pure-menu-item"><a data-target="values" href="#" >Values</a></li>
+            <li className="navigation-item pure-menu-item"><a data-target="contact" href="#" >Contact</a></li>
           </ul>
         </nav>
       </section>
@@ -25,7 +25,7 @@ class Navbar extends React.Component {
 
   goTo(e) {
     e.preventDefault();
-    const $el = $(e.currentTarget);
+    const $el = $(e.target);
     const $target = $('[data-id=' + $el.data('target') + ']');
     if(!$target) return;
 
