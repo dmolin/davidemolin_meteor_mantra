@@ -57,6 +57,7 @@ modules@0.5.1-rc.5
 modules-runtime@0.6.1-rc.5
 mongo@1.1.5-rc.5
 mongo-id@1.0.2-rc.5
+nolimits4web:swiper@3.3.1
 npm-mongo@1.4.41-rc.5
 observe-sequence@1.0.9-rc.5
 ordered-dict@1.0.5-rc.5
