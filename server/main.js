@@ -55,5 +55,12 @@ function insertTestimonials() {
   Collections.Testimonials.insert({
     avatar:'profile-avelasquez.jpg', name:'Alejandro Velasquez', title:'UX/UI at Payfriendz',
     recommendation:'Honoured to work next to such a brilliant professional. Thanks Davide!',
-    at:moment('2016-02-24', 'YYYY-MM-DD').toDate(), relationship:'Alejandro worked directly with Davide at Payfriendz'})
+    at:moment('2016-02-24', 'YYYY-MM-DD').toDate(), relationship:'Alejandro worked directly with Davide at Payfriendz'
+  })
+  Collections.Testimonials.insert({
+    avatar:'profile-jhayward.jpg', name:'Julia Hayward', title:'Senior Agile Project Manager at Daily Mail',
+    recommendation:'Davide is an excellent front end / full stack web developer and I would highly recommend him. He immediately hit the ground running working on a challenging project that he executed brilliantly. He works in a very professional manner, he is friendly, collaborative and has a can do attitude. His level of expertise was second to none and I would not hesitate to hire him again.',
+    at:moment('2015-08-12', 'YYYY-MM-DD').toDate(), relationship:'Julia managed Davide at MailOnline'
+  })
+
 }
