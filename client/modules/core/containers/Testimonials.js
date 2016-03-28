@@ -7,7 +7,7 @@ import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
   if(Meteor.subscribe('testimonials').ready()) {
-    const testimonials = Collections.Testimonials.find().fetch();
+    const testimonials = Collections.Testimonials.find({},{sort:{at:-1}}).fetch();
     onData(null, {testimonials});
   }
 };
