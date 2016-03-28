@@ -27,7 +27,7 @@ class LatestWorks extends React.Component {
           <header className="section-header">
             <h1 className="section-title">latest works</h1>
 
-            <p>Here is a brief selection of some of the projects I’ve been working on recently...</p>
+            <p>Here is a brief selection of some of the projects I’ve been working on recently. <br />More can be found in my <a className="link" href="https://github.com/dmolin?tab=repositories" target="_blank">GitHub Repositories</a>...</p>
           </header>
           <div className="swiper-container">
             <div className="swiper-pagination"></div>

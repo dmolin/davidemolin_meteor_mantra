@@ -29,6 +29,19 @@ function insertFeaturedProjects() {
 function insertProjects() {
   Collections.Projects.remove({})
   Collections.Projects.insert({
+    title:'davidemolin.com (Meteor + React)',
+    description:[
+      "My own website, created with the upcoming new version of MeteorJS, along with React+Redux and Mantra",
+      "Meteor allows for a true realtime UI and isomorphic codebase, while React and Redux simplify and rationalise the data flow and the application state management"
+    ],
+    technologies:['MeteorJS_1.3', 'React', 'Redux', 'Mantra'],  //in case I want to list the techs used for this project,
+    //githubUrl: 'https://github.com/dmolin/react-kanban',
+    prodUrl: 'http://www.davidemolin.com',
+    image: 'projects/davidemolin.png',
+    priority: 1001
+  })
+
+  Collections.Projects.insert({
     title:'Kanban React',
     description:[
       "A small project I built while studying React.",
@@ -51,6 +64,30 @@ function insertProjects() {
     githubUrl: 'https://github.com/dmolin/meteor-gunblaster',
     image: 'projects/gunblaster.png',
     priority: 990
+  })
+
+  Collections.Projects.insert({
+    title:'Admin Dashboard (AngularJS)',
+    description:[
+      "A very basic project that I use as a generic template when building Admin/Backoffice applications.",
+      "The App uses an Express Node.js Server, with Mongo/Mongoose as a DB solution and Amazon S3 to store attachments"
+    ],
+    technologies:['Angular', 'Mongo', 'S3'],  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/angular-admin-dashboard',
+    image: 'projects/aadmin-angular.png',
+    priority: 989
+  })
+
+  Collections.Projects.insert({
+    title:'X-Plane Instruments (Node + Socket.io)',
+    description:[
+      "Access your X-Plane Flight Simulator Instruments, right in your browser, using UDP over Node.js and Socket.io",
+      "This project, made for fun, allows you to see the instruments of your airplane flight simulator from a separate browser window, using X-Plane Data output API and a broadcasting NodeJS server via Socket.io"
+    ],
+    technologies:['NodeJS', 'Socket.io', 'UDP'],  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/https://github.com/dmolin/flightSimPanels',
+    image: 'projects/xplane.png',
+    priority: 988
   })
 }
 

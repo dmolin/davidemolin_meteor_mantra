@@ -16,6 +16,8 @@ class AboutMe extends React.Component {
               <a href="//linkedin.com/in/davidemolin" target="_blank">
                 <img className="cameo pure-img" title="dmolin-quarter" src="/images/me250.jpg" alt="Picture of myself" />
               </a>
+              <p className="testimonial-data testimonial-name">Davide Molin</p>
+              <p className="testimonial-data">Have a look at my <a className="link" target="_blank" href="https://www.linkedin.com/in/davidemolin">LinkedIn profile</a></p>
             </div>
             <div className="about-me-content pure-u-1 pure-u-md-2-3 pure-u-lg-3-4">
               <p>Hi, I’m Davide and CodingShack is the company I founded to provide professional Development services to my clients.</p>
