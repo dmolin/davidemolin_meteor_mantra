@@ -2,6 +2,14 @@ import React from 'react';
 import Time from 'react-time';
 
 class Testimonials extends React.Component {
+  componentDidMount() {
+    var mySwiper = new Swiper ('.testimonials .swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev'
+    })
+  }
+
   render () {
     const {testimonials, ...props} = this.props;
 

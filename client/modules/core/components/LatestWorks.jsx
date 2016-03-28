@@ -3,7 +3,7 @@ import Project from './Project.jsx'
 
 class LatestWorks extends React.Component {
   componentDidMount() {
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.latest-works .swiper-container', {
       // Optional parameters
       //loop: true
       // If we need pagination

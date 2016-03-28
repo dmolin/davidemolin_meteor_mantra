@@ -19,9 +19,9 @@ Meteor.startup(() => {
 
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
-  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', fgSize:'auto 50%', priority:1000})
-  Collections.FeaturedProjects.insert({imageBg:'x-plane-bg.jpg', imageFg: 'x-plane-fg.png', fgSize:'auto 70%', priority:990})
-  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg-big.png', description:'', fgSize:'auto 70%', priority:980})
+  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'x-plane-bg.jpg', imageFg: 'x-plane-fg.png', fgSize:'auto 70%', bgColor: '#0f2a45', priority:990})
+  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg-big.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
 }
 
 function insertProjects() {
