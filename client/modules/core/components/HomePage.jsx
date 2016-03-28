@@ -7,10 +7,12 @@ import LatestWorks from '../containers/LatestWorks';
 import MyValues from './MyValues.jsx';
 import GetInTouch from './GetInTouch.jsx';
 import Footer from './Footer.jsx';
+import MessageOverlay from './MessageOverlay.jsx';
 
 const HomePage = ({content = () => null}) => (
   <section className="home" data-id="home">
-    <Jumbotron message="Hi, I'm Davide Molin" tagline="I do front-end development for a living"/>
+    <MessageOverlay message="Hi, I'm Davide Molin" tagline="I do front-end development for a living" />
+    <Jumbotron />
     <AboutMe data-id="about-me"/>
     <Testimonials data-id="testimonials" />
     <FunFacts />

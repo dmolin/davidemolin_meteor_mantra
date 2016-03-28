@@ -19,7 +19,9 @@ Meteor.startup(() => {
 
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
-  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', fgSize:'auto 50%', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'x-plane-bg.jpg', imageFg: 'x-plane-fg.png', fgSize:'auto 70%', priority:990})
+  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg-big.png', description:'', fgSize:'auto 70%', priority:980})
 }
 
 function insertProjects() {
@@ -61,6 +63,11 @@ function insertTestimonials() {
     avatar:'profile-jhayward.jpg', name:'Julia Hayward', title:'Senior Agile Project Manager at Daily Mail',
     recommendation:'Davide is an excellent front end / full stack web developer and I would highly recommend him. He immediately hit the ground running working on a challenging project that he executed brilliantly. He works in a very professional manner, he is friendly, collaborative and has a can do attitude. His level of expertise was second to none and I would not hesitate to hire him again.',
     at:moment('2015-08-12', 'YYYY-MM-DD').toDate(), relationship:'Julia managed Davide at MailOnline'
+  })
+  Collections.Testimonials.insert({
+    avatar:'profile-wgreen.jpg', name:'Will Green', title:'Digital Marketing Manager',
+    recommendation:'I signed up to this course as I am a Digital Marketing Manager with limited HTML and CSS knowledge and I wanted to learn more about front end development. This course has been a real eye opener and I have learned more then I ever thought I would! Davide is a very enthusiastic instructor which really helps as there was lots of new things for me to take on board. I would thoroughly reccommend this course to anyone interested in front end development!',
+    at:moment('2015-05', 'YYYY-MM').toDate(), relationship:'Will attended the Front-End Development course instructed by Davide'
   })
 
 }
