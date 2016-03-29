@@ -12,7 +12,9 @@ class MessageOverlay extends React.Component {
   render() {
     const {message, tagline} = this.props
 
-    setTimeout(this.displayMessage.bind(this), 1000);
+    if(message || tagline) {
+      setTimeout(this.displayMessage.bind(this), 1000);
+    }
 
     return (
       <div className="message-overlay">

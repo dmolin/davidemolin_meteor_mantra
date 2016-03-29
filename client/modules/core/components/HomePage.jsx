@@ -11,7 +11,7 @@ import MessageOverlay from './MessageOverlay.jsx';
 
 const HomePage = ({content = () => null}) => (
   <section className="home" data-id="home">
-    <MessageOverlay message="Hi, I'm Davide Molin" tagline="I do front-end development for a living" />
+    <MessageOverlay />
     <Jumbotron />
     <AboutMe data-id="about-me"/>
     <Testimonials data-id="testimonials" />
