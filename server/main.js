@@ -21,7 +21,7 @@ function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
   Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:1000})
   Collections.FeaturedProjects.insert({imageBg:'x-plane-bg.jpg', imageFg: 'x-plane-fg.png', fgSize:'auto 70%', bgColor: '#0f2a45', priority:990})
-  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg-big.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
+  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
   Collections.FeaturedProjects.insert({imageBg:'policyexpert-bg.jpg', imageFg:'policyexpert-fg.png', description:'', fgSize:'auto 70%', bgColor:'#f9f9f9', priority:979})
   Collections.FeaturedProjects.insert({imageBg:'giadacoppi-bg.jpg', imageFg:'giadacoppi-fg.png', description:'', fgSize:'auto 70%', bgColor:'#e5e5e5', priority:978})
 }
@@ -31,13 +31,12 @@ function insertProjects() {
   Collections.Projects.insert({
     title:'davidemolin.com (Meteor + React)',
     description:[
-      "My own website, created with the upcoming new version of MeteorJS, along with React+Redux and Mantra",
+      "My own website, created with the new version of MeteorJS (1.3), along with React+Redux and Mantra",
       "Meteor allows for a true realtime UI and isomorphic codebase, while React and Redux simplify and rationalise the data flow and the application state management"
     ],
     technologies:['MeteorJS_1.3', 'React', 'Redux', 'Mantra'],  //in case I want to list the techs used for this project,
-    //githubUrl: 'https://github.com/dmolin/react-kanban',
-    prodUrl: 'http://www.davidemolin.com',
     image: 'projects/davidemolin.png',
+    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-meteor-react',
     priority: 1001
   })
 
@@ -45,7 +44,7 @@ function insertProjects() {
     title:'Kanban React',
     description:[
       "A small project I built while studying React.",
-      "The project is build using React and Flux and intentionally mimicks the look and feel of Trello. You can add/remove columns and cards, reorder them and drag and drop columns and cards around the board"
+      "The project was built using React and Flux and intentionally mimicks the look and feel of Trello. You can add/remove columns and cards, reorder them and drag and drop columns and cards around the board"
     ],
     technologies:'',  //in case I want to list the techs used for this project,
     githubUrl: 'https://github.com/dmolin/react-kanban',
@@ -85,10 +84,36 @@ function insertProjects() {
       "This project, made for fun, allows you to see the instruments of your airplane flight simulator from a separate browser window, using X-Plane Data output API and a broadcasting NodeJS server via Socket.io"
     ],
     technologies:['NodeJS', 'Socket.io', 'UDP'],  //in case I want to list the techs used for this project,
-    githubUrl: 'https://github.com/dmolin/https://github.com/dmolin/flightSimPanels',
+    githubUrl: 'https://github.com/dmolin/flightSimPanels',
+    videoUrl: 'https://vimeo.com/60944060',
     image: 'projects/xplane.png',
     priority: 988
   })
+
+  Collections.Projects.insert({
+    title:'Policyexpert webapp (BackboneJS)',
+    description:[
+      "With QMetric, we build the entire Policyexpert Web Application to help their customers to build and choose the best car and home insurance",
+      "The Web App was built using Backbone JS (connected via REST endpoints to a Java based backend)"
+    ],
+    technologies:['BackboneJS', 'Grunt'],  //in case I want to list the techs used for this project,
+    image: 'projects/policyexpert-backbone.png',
+    liveUrl: 'https://www.policyexpert.co.uk/secured/#car',
+    liveLabel: 'Visit',
+    priority: 987
+  })
+
+  Collections.Projects.insert({
+    title:'Old davidemolin.com website (AngularJS)',
+    description:[
+      "The previous version of this website, built with AngularJS and Grunt"
+    ],
+    technologies:['AngularJS', 'Grunt'],  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-angular',
+    image: 'projects/davidemolin-angular.png',
+    priority: 986
+  })
+
 }
 
 function insertTestimonials() {
