@@ -93,7 +93,7 @@ function insertProjects() {
   Collections.Projects.insert({
     title:'Policyexpert webapp (BackboneJS)',
     description:[
-      "With QMetric, we build the entire Policyexpert Web Application to help their customers to build and choose the best car and home insurance",
+      "With QMetric, we built the entire Policyexpert Web Application to help their customers to build and choose the best car and home insurance",
       "The Web App was built using Backbone JS (connected via REST endpoints to a Java based backend)"
     ],
     technologies:['BackboneJS', 'Grunt'],  //in case I want to list the techs used for this project,
