@@ -8,6 +8,9 @@ import jumbotronModule from './modules/jumbotron';
 //init context
 const context = initContext();
 
+coreModule.context && coreModule.context(context.LocalState);
+jumbotronModule.context && jumbotronModule.context(context.LocalState);
+
 //create app
 const app = createApp(context);
 app.loadModule(coreModule);

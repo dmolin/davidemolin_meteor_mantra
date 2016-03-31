@@ -8,8 +8,8 @@ export const composer = ({context}, onData) => {
   const {Meteor, Collections, LocalState} = context();
 
   if(Meteor.subscribe('projects.featured').ready()) {
-    const projects = Collections.FeaturedProjects.find({}, {sort:{priority:-1, createdAt:-1}}).fetch();
-    onData(null, {projects, bgColor:LocalState.get('JUMBOTRON_COLOR') });
+    const projects = Collections.FeaturedProjects.find({}, {sort:{priority:-1, createdAt:-1}}).fetch() || [];
+    onData(null, {projects, currentIndex: LocalState.get('JUMBOTRON_CURRENT_INDEX'), highestIndex: LocalState.get('JUMBOTRON_HIGHEST_ACTIVE_INDEX')});
   }
 };
 

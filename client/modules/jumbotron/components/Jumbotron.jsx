@@ -9,18 +9,19 @@ class Jumbotron extends React.Component {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
+      //lazyLoading: true,
       onTransitionStart: (swiper) => {
-        console.log("on transition start", swiper)
         let project = projects[swiper.activeIndex]
-        console.log('project', project)
-        slideTo(project);
+        //slideTo(project, swiper.activeIndex);
+        slideTo(swiper.activeIndex);
       }
     })
   }
 
   render() {
-    let {className = "", projects, bgColor, ...props} = this.props;
-    let backColor = bgColor || (projects.length ? projects[0].bgColor || '#000' : '#000')
+    let {className = "", projects, currentIndex, highestIndex, ...props} = this.props;
+    let currentItem = (projects.length && projects[currentIndex]) || {};
+    let backColor = currentItem.bgColor || (projects.length ? projects[0].bgColor || '#000' : '#000');
 
     return (
       <section className={className + " jumbotron"} style={{backgroundColor: backColor}}>
@@ -29,12 +30,16 @@ class Jumbotron extends React.Component {
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
           <div className="swiper-wrapper">
-            {projects.map(project => {
-              const styleValue = "url(/images/projects/" + project.imageBg + ") center top no-repeat";
+            {projects.map((project,index) => {
+              //let bgStyleValue = "url(/images/projects/bgtile.jpg) center top repeat";
+              let bgStyleValue = "none";
+              if(index <= highestIndex+1 ) {
+                bgStyleValue = "url(/images/projects/" + project.imageBg + ") center top no-repeat";
+              }
               const fgImageBg = "url(/images/projects/" + project.imageFg + ") bottom center no-repeat";
               const fgSize = project.fgSize || 'auto 50%';
               return (
-                <article className="jumbotron-item swiper-slide" key={project._id} style={{background: styleValue}}>
+                <article className="jumbotron-item swiper-slide" key={project._id} style={{background: bgStyleValue}}>
                   <div className="jumbotron-image" style={{background: fgImageBg, backgroundSize: fgSize }} />
                 </article>
               );
