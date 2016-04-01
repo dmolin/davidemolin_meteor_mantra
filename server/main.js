@@ -19,11 +19,11 @@ Meteor.startup(() => {
 
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
-  Collections.FeaturedProjects.insert({imageBg:'payfriendz-bg.jpg', imageFg:'payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:1000})
-  Collections.FeaturedProjects.insert({imageBg:'x-plane-bg.jpg', imageFg: 'x-plane-fg.png', fgSize:'auto 70%', bgColor: '#0f2a45', priority:990})
-  Collections.FeaturedProjects.insert({imageBg:'udemy-bg.jpg', imageFg:'udemy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
-  Collections.FeaturedProjects.insert({imageBg:'policyexpert-bg.jpg', imageFg:'policyexpert-fg.png', description:'', fgSize:'auto 70%', bgColor:'#f9f9f9', priority:979})
-  Collections.FeaturedProjects.insert({imageBg:'giadacoppi-bg.jpg', imageFg:'giadacoppi-fg.png', description:'', fgSize:'auto 70%', bgColor:'#e5e5e5', priority:978})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/payfriendz-bg.jpg', imageFg:'jumbotron/payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/x-plane-bg.jpg', imageFg: 'jumbotron/x-plane-fg.png', fgSize:'auto 70%', bgColor: '#0f2a45', priority:990})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/udemy-bg.jpg', imageFg:'jumbotron/udemy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/policyexpert-bg.jpg', imageFg:'jumbotron/policyexpert-fg.png', description:'', fgSize:'auto 70%', bgColor:'#f9f9f9', priority:979})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/giadacoppi-bg.jpg', imageFg:'jumbotron/giadacoppi-fg.png', description:'', fgSize:'auto 70%', bgColor:'#e5e5e5', priority:978})
 }
 
 function insertProjects() {
@@ -37,7 +37,19 @@ function insertProjects() {
     technologies:['MeteorJS_1.3', 'React', 'Redux', 'Mantra'],  //in case I want to list the techs used for this project,
     image: 'projects/davidemolin.png',
     githubUrl: 'https://github.com/dmolin/www.davidemolin.com-meteor-react',
-    priority: 1001
+    priority: 1000
+  })
+
+  Collections.Projects.insert({
+    title:'payfriendz mobile App (MeteorJS)',
+    description:[
+      "With the Payfriendz team we built the new mobile realtime App that makes sending/receiving money easy as 123!",
+      "The Cordova-based App is built using the realtime MeteorJS platform, that made possible to build a reactive UI and implement latency compensation for offline scenarios"
+    ],
+    technologies:['MeteorJS'],  //in case I want to list the techs used for this project,
+    image: 'projects/payfriendz-meteor.png',
+    itunesUrl: 'https://itunes.apple.com/gb/app/payfriendz-send-request-money/id666006195?mt=8',
+    priority: 990
   })
 
   Collections.Projects.insert({
@@ -50,7 +62,7 @@ function insertProjects() {
     githubUrl: 'https://github.com/dmolin/react-kanban',
     liveUrl: 'http://dmolin.github.io/react-kanban/',
     image: 'projects/kanban-react.png',
-    priority: 1000
+    priority: 980
   })
 
   Collections.Projects.insert({
@@ -62,19 +74,19 @@ function insertProjects() {
     technologies:['MeteorJS', 'Mongo', 'MailGun API'],  //in case I want to list the techs used for this project,
     githubUrl: 'https://github.com/dmolin/meteor-gunblaster',
     image: 'projects/gunblaster.png',
-    priority: 990
+    priority: 970
   })
 
   Collections.Projects.insert({
     title:'Admin Dashboard (AngularJS)',
     description:[
       "A very basic project that I use as a generic template when building Admin/Backoffice applications.",
-      "The App uses an Express Node.js Server, with Mongo/Mongoose as a DB solution and Amazon S3 to store attachments"
+      "The App uses an Express Node.js Server, with Mongo/Mongoose for DB access and Amazon S3 to store attachments"
     ],
     technologies:['Angular', 'Mongo', 'S3'],  //in case I want to list the techs used for this project,
     githubUrl: 'https://github.com/dmolin/angular-admin-dashboard',
     image: 'projects/aadmin-angular.png',
-    priority: 989
+    priority: 960
   })
 
   Collections.Projects.insert({
@@ -87,7 +99,7 @@ function insertProjects() {
     githubUrl: 'https://github.com/dmolin/flightSimPanels',
     videoUrl: 'https://vimeo.com/60944060',
     image: 'projects/xplane.png',
-    priority: 988
+    priority: 950
   })
 
   Collections.Projects.insert({
@@ -100,7 +112,7 @@ function insertProjects() {
     image: 'projects/policyexpert-backbone.png',
     liveUrl: 'https://www.policyexpert.co.uk/secured/#car',
     liveLabel: 'Visit',
-    priority: 987
+    priority: 940
   })
 
   Collections.Projects.insert({
@@ -111,7 +123,7 @@ function insertProjects() {
     technologies:['AngularJS', 'Grunt'],  //in case I want to list the techs used for this project,
     githubUrl: 'https://github.com/dmolin/www.davidemolin.com-angular',
     image: 'projects/davidemolin-angular.png',
-    priority: 986
+    priority: 930
   })
 
 }

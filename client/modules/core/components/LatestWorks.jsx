@@ -4,17 +4,11 @@ import Project from './Project.jsx'
 class LatestWorks extends React.Component {
   componentDidMount() {
     var mySwiper = new Swiper ('.latest-works .swiper-container', {
-      // Optional parameters
-      //loop: true
-      // If we need pagination
       pagination: '.swiper-pagination',
-
-      // Navigation arrows
       nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev'
-
-      // And if we need scrollbar
-      //scrollbar: '.swiper-scrollbar'
+      prevButton: '.swiper-button-prev',
+      lazyLoading: true,
+      preloadImages: false
     })
   }
 
@@ -35,10 +29,11 @@ class LatestWorks extends React.Component {
             <div className="swiper-button-next"></div>
 
             <ul className="projects swiper-wrapper">
-              {projects.map((p) => {
+              {projects.map((p, index) => {
+                const preload = index === 0;
                 return (
                   <div className="section-content swiper-slide pure-grid" key={p._id}>
-                      <Project {...p} />
+                      <Project preload={preload} {...p} />
                   </div>
                 )
               })}

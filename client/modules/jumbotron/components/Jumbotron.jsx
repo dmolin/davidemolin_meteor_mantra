@@ -9,7 +9,7 @@ class Jumbotron extends React.Component {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
-      //lazyLoading: true,
+      grabCursor: true,
       onTransitionStart: (swiper) => {
         let project = projects[swiper.activeIndex]
         //slideTo(project, swiper.activeIndex);

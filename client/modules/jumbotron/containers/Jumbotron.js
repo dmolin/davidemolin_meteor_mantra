@@ -4,7 +4,7 @@ import Spinner from '../../core/components/Spinner.jsx';
 
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 
-export const composer = ({context}, onData) => {
+export const onPropsChange = ({context}, onData) => {
   const {Meteor, Collections, LocalState} = context();
 
   if(Meteor.subscribe('projects.featured').ready()) {
@@ -18,7 +18,19 @@ export const depsMapper = (context, actions) => ({
   context: () => context
 });
 
+/* test for a full page spinner
+const Spinner = () => (
+  <div className="spinner-container jumbotron" >
+    <div className="spinner">
+      <div className="bounce1"></div>
+      <div className="bounce2"></div>
+      <div className="bounce3"></div>
+    </div>
+  </div>
+);
+*/
+
 export default composeAll(
-  composeWithTracker(composer, Spinner),
+  composeWithTracker(onPropsChange, Spinner),
   useDeps(depsMapper)
 )(Jumbotron);

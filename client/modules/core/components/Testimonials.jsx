@@ -6,7 +6,9 @@ class Testimonials extends React.Component {
     var mySwiper = new Swiper ('.testimonials .swiper-container', {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev'
+      prevButton: '.swiper-button-prev',
+      preloadImages: false,
+      lazyLoading: true
     })
   }
 
@@ -29,7 +31,10 @@ class Testimonials extends React.Component {
                 return (
                   <section className="testimonial pure-u-1 swiper-slide" key={t._id}>
                     <header>
-                      <img className="testimonial-profile-picture cameo pure-img" title="referrer" src={"/images/profiles/" + t.avatar} />
+                      <div className="testimonial-profile-picture-wrapper cameo">
+                        <div className="swiper-lazy-preloader" />
+                        <img className="testimonial-profile-picture cameo pure-img swiper-lazy" data-src={"/images/profiles/" + t.avatar} />
+                      </div>
                       <p className="testimonial-data testimonial-name">{t.name}</p>
                       <p className="testimonial-data">{t.title}</p>
                     </header>
