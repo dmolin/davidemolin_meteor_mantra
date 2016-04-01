@@ -17,3 +17,17 @@ app.loadModule(coreModule);
 app.loadModule(jumbotronModule);
 app.init();
 
+/*
+Meteor.startup(() => {
+  Meteor.AppCache.config({
+    onlineOnly: [
+      '/images/projects/',
+      '/images/profiles/'
+    ],
+    chrome: false,
+    firefox: false,
+    safari: false,
+    ie: false
+  });
+});
+*/

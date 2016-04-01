@@ -14,6 +14,19 @@ Meteor.startup(() => {
   insertTestimonials()
   //}
 
+  // console.log(<M></M>eteor.AppCache);
+  // Meteor.AppCache.config({
+  //   onlineOnly: [
+  //     '/images/projects/',
+  //     '/images/profiles/'
+  //   ],
+  //   chrome: false,
+  //   firefox: false,
+  //   safari: false,
+  //   ie: false
+  // });
+  // console.log("AppCache configured");
+
   publications();
 });
 
@@ -132,7 +145,7 @@ function insertProjects() {
   Collections.Projects.insert({
     title:'Zeebox Mission Control (Backbone)',
     description:[
-      "Helping the guys at Zeebox (now Beambly) to improve and expand the Mission Control Web Application, used by network content owners to enhance their shows and channels for the Zeebox App and website"
+      "Helping the guys at Zeebox (now Beamly) to improve and expand the Mission Control Web Application, used by network content owners to enhance their shows and channels for the Zeebox App and website"
     ],
     technologies:['Backbone.js'],  //in case I want to list the techs used for this project,
     image: 'projects/zeebox.png',

@@ -42,4 +42,14 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
+
+  /*
+  FlowRouter.notFound = {
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<HomePage />)
+      })
+    }
+  };
+  */
 }
