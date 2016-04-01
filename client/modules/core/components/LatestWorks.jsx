@@ -8,7 +8,9 @@ class LatestWorks extends React.Component {
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       lazyLoading: true,
-      preloadImages: false
+      preloadImages: false,
+      lazyLoadingInPrevNext: true,
+      observer:true
     })
   }
 

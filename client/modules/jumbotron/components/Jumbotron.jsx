@@ -10,6 +10,7 @@ class Jumbotron extends React.Component {
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       grabCursor: true,
+      observer:true,
       onTransitionStart: (swiper) => {
         let project = projects[swiper.activeIndex]
         //slideTo(project, swiper.activeIndex);

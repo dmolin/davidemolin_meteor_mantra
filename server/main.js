@@ -24,6 +24,8 @@ function insertFeaturedProjects() {
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/udemy-bg.jpg', imageFg:'jumbotron/udemy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/policyexpert-bg.jpg', imageFg:'jumbotron/policyexpert-fg.png', description:'', fgSize:'auto 70%', bgColor:'#f9f9f9', priority:979})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/giadacoppi-bg.jpg', imageFg:'jumbotron/giadacoppi-fg.png', description:'', fgSize:'auto 70%', bgColor:'#e5e5e5', priority:978})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/zeebox-bg.jpg', imageFg:'jumbotron/zeebox-fg.png', description:'', fgSize:'auto 70%', bgColor:'#6f0000', priority:970})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/mindcandy-bg.jpg', imageFg:'jumbotron/mindcandy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:960})
 }
 
 function insertProjects() {
@@ -31,10 +33,11 @@ function insertProjects() {
   Collections.Projects.insert({
     title:'davidemolin.com (Meteor + React)',
     description:[
-      "My own website, created with the new version of MeteorJS (1.3), along with React+Redux and Mantra",
-      "Meteor allows for a true realtime UI and isomorphic codebase, while React and Redux simplify and rationalise the data flow and the application state management"
+      "My own website, created with the new version of MeteorJS (1.3), along with React and Mantra",
+      "Meteor allows for a true realtime UI and isomorphic codebase, while React simplify and rationalise the data flow and the application state management",
+      "No Redux yet, but Mantra Actions and composers mimick the Redux decoupling between UI and domain logic quite effectively."
     ],
-    technologies:['MeteorJS_1.3', 'React', 'Redux', 'Mantra'],  //in case I want to list the techs used for this project,
+    technologies:['MeteorJS_1.3', 'React', 'Mantra'],  //in case I want to list the techs used for this project,
     image: 'projects/davidemolin.png',
     githubUrl: 'https://github.com/dmolin/www.davidemolin.com-meteor-react',
     priority: 1000
@@ -44,7 +47,7 @@ function insertProjects() {
     title:'payfriendz mobile App (MeteorJS)',
     description:[
       "With the Payfriendz team we built the new mobile realtime App that makes sending/receiving money easy as 123!",
-      "The Cordova-based App is built using the realtime MeteorJS platform, that made possible to build a reactive UI and implement latency compensation for offline scenarios"
+      "The Cordova-based App was built using the realtime MeteorJS platform, that made it possible building a reactive UI and implement latency compensation features for offline use"
     ],
     technologies:['MeteorJS'],  //in case I want to list the techs used for this project,
     image: 'projects/payfriendz-meteor.png',
@@ -126,6 +129,15 @@ function insertProjects() {
     priority: 930
   })
 
+  Collections.Projects.insert({
+    title:'Zeebox Mission Control (Backbone)',
+    description:[
+      "Helping the guys at Zeebox (now Beambly) to improve and expand the Mission Control Web Application, used by network content owners to enhance their shows and channels for the Zeebox App and website"
+    ],
+    technologies:['Backbone.js'],  //in case I want to list the techs used for this project,
+    image: 'projects/zeebox.png',
+    priority: 930
+  })
 }
 
 function insertTestimonials() {

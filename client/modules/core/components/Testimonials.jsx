@@ -8,7 +8,8 @@ class Testimonials extends React.Component {
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       preloadImages: false,
-      lazyLoading: true
+      lazyLoading: true,
+      observer:true
     })
   }
 
