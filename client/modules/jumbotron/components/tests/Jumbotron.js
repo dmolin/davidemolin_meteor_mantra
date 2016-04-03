@@ -1,7 +1,8 @@
 const {describe, it} = global;
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Jumbotron from '../Jumbotron.jsx';
+import sinon from 'sinon';
 
 describe('jumbotron.components.Jumbotron', () => {
   it('should exist', () => {
@@ -33,7 +34,6 @@ describe('jumbotron.components.Jumbotron', () => {
   })
 
   it('should preload the background of the current active slide and the following one', () => {
-
     function checkPreload(nodes, currentIndex) {
       // console.log(Array.prototype.map.call(nodes, (n) => (
       //   n.props.style
@@ -52,6 +52,15 @@ describe('jumbotron.components.Jumbotron', () => {
     let el2 = shallow(<Jumbotron projects={projects} currentIndex={0} highestIndex={1} />)
     checkPreload(el2.find('.jumbotron-item').nodes, 1)
   })
+
+  it('should use the current active item for the jumbotron background color', () => {
+    const projects = [_buildProject(1), _buildProject(2), _buildProject(3), _buildProject(4)]
+    let el = shallow(<Jumbotron projects={projects} currentIndex={2} />)
+
+    //check that the background color is the one set for the project at index=2
+    expect(el.find('.jumbotron').node.props.style.backgroundColor).to.equal('bgColorCode3')
+  })
+
 });
 
 function _buildProject(suffix) {
