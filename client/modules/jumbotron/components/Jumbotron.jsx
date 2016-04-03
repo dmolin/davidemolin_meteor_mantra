@@ -20,7 +20,7 @@ class Jumbotron extends React.Component {
   }
 
   render() {
-    let {className = "", projects, currentIndex, highestIndex, ...props} = this.props;
+    let {className = "", projects, currentIndex = 0, highestIndex = 0, ...props} = this.props;
     let currentItem = (projects.length && projects[currentIndex]) || {};
     let backColor = currentItem.bgColor || (projects.length ? projects[0].bgColor || '#000' : '#000');
 
@@ -52,5 +52,11 @@ class Jumbotron extends React.Component {
   }
 
 }
+
+const { arrayOf, object } = React.PropTypes
+
+Jumbotron.propTypes = {
+  projects: arrayOf(object).isRequired
+};
 
 export default Jumbotron;

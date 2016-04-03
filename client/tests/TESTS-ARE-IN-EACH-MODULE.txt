@@ -1,0 +1,2 @@
+tests are located inside each module relevant folder.
+ex.: tests for the "jumbotron" components are located under /modules/jumbotron/components/tests
