@@ -3,8 +3,6 @@ davidemolin.com Website, using MeteorJS, Mantra and React
 
 The website is live [here](https://davidemolin.com)
 
-![ScreenShot](/README/davidemolin.png?raw=true)
-
 ### Technologies Used ###
 
 - MeteorJS 1.3
@@ -15,3 +13,6 @@ The website is live [here](https://davidemolin.com)
 - mupx (Meteor Up) for production deployments
 
 The first iteration of this project has just been released in production and is still under active development.
+
+![ScreenShot](/README/davidemolin.png?raw=true)
+
