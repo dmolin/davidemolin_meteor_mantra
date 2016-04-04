@@ -132,17 +132,6 @@ function insertProjects() {
   })
 
   Collections.Projects.insert({
-    title:'Old davidemolin.com website (AngularJS)',
-    description:[
-      "The previous version of this website, built with AngularJS and Grunt"
-    ],
-    technologies:['AngularJS', 'Grunt'],  //in case I want to list the techs used for this project,
-    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-angular',
-    image: 'projects/davidemolin-angular.png',
-    priority: 930
-  })
-
-  Collections.Projects.insert({
     title:'Zeebox Mission Control (Backbone)',
     description:[
       "Helping the guys at Zeebox (now Beamly) to improve and expand the Mission Control Web Application, used by network content owners to enhance their shows and channels for the Zeebox App and website"
@@ -150,6 +139,30 @@ function insertProjects() {
     technologies:['Backbone.js'],  //in case I want to list the techs used for this project,
     image: 'projects/zeebox.png',
     priority: 930
+  })
+
+  Collections.Projects.insert({
+    title:'Mindcandy Moshlings.com',
+    description:[
+      "In Mindcandy I worked on all the company properties; In particular I was solely responsible for the whole front-end work on Moshlings.com from inception to delivery: markup, css, responsive design and javascript coding",
+      "I also realised proof of concepts to replace the current Moshimonster flash-based registration process into a in OO Javascript/HTML5 one"
+    ],
+    technologies:['jQuery', 'OO Javascript'],  //in case I want to list the techs used for this project,
+    image: 'projects/mindcandy.png',
+    liveUrl: 'http://www.moshlings.com',
+    liveLabel: 'Visit',
+    priority: 920
+  })
+
+  Collections.Projects.insert({
+    title:'Old davidemolin.com website (AngularJS)',
+    description:[
+      "The previous version of this website, built with AngularJS and Grunt"
+    ],
+    technologies:['AngularJS', 'Grunt'],  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-angular',
+    image: 'projects/davidemolin-angular.png',
+    priority: 910
   })
 }
 
