@@ -28,6 +28,7 @@ class AboutMe extends React.Component {
               <h2>technologies I've been working with</h2>
               <ul className="taglist cf">
                 <li className="taglist__item">MeteorJS</li>
+                <li className="taglist__item">Unit Testing</li>
                 <li className="taglist__item">AngularJs</li>
                 <li className="taglist__item">Backbone.js</li>
                 <li className="taglist__item">Node.js</li>
